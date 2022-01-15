@@ -1,5 +1,2 @@
 # mates
-Pruebas de mates
-
-Hola ola
-
+Librería con operaciones matemáticas.
