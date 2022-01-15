@@ -1,4 +1,2 @@
 # mates
-Pruebas de mates
-
-hola ola
+Librería de Javascript con operaciones matemáticas.
