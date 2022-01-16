@@ -1,26 +1,44 @@
 /* Copiright Adriano Porcheddu adriano@eja.it 2022*/
 
 //Número PI
-var pi = 3,14159265358979323846;
+var pi = 3.14159265358979323846;
 
-//Suma dos números
-function suma(a, b) {
-	return a+b
+//##################################OPERACIONES BÁSICAS
+
+//Suma números
+function suma() {
+	var tot = 0;
+	for (n in arguments) {
+		tot += arguments[n];
+	}
+	return tot
 }
 
-//Resta un número(b) a otro(a)
-function resta(a, b) {
-	return a-b
+//Resta números
+function resta() {
+	tot = arguments[0];
+	for (i = 1; i < arguments.length; i++) {
+		tot -= arguments[i];
+	}
+	return tot
 }
 
-//Multiplica un número(a) entre otro(b)
-function multiplica(a, b) {
-	return a*b
+//Multiplica números
+function multiplica() {
+	var tot = 1;
+	for (n in arguments) {
+		tot *= arguments[n];
+	}
+	return tot
 }
 
-//Divide un número(a) entre otro(b)
-function divide(a, b) {
-	return a/b
+//Divide números
+function divide() {
+	tot = arguments[0];
+	for (i = 1; i < arguments.length; i++) {
+		tot /= arguments[i];
+	}
+	return tot
 }
 
 //Da el resto de un número(a) entre otro(b)
@@ -90,4 +108,19 @@ function media(nA) {
 	}
 	var res = (suma / nAL);
 	return res
+}
+
+//################################GEOMETRÍA
+
+//CÍRCULO
+function perimetro(radio) {
+	return (multiplica(radio, pi, 2))
+}
+function area(radio) {
+	return (multiplica(expone(radio, 2), pi))
+}
+
+function circulo(radio) {
+	var datos = ["radio = " + radio, "área = " + area(radio) + "²", "perímetro = " + perimetro(radio)];
+	return datos
 }
