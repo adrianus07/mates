@@ -80,3 +80,13 @@ function primosEntreDecenas(veces) {
 	}
 	return fracciones
 }
+
+function media(nA) {
+	var nAL = nA.length;
+	var suma = 0;
+	for (var i = 0; i < nAL; i++) {
+		suma += parseFloat(nA[i]);
+	}
+	var res = (suma / nAL);
+	return res
+}
