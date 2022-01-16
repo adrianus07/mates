@@ -81,6 +81,7 @@ function primosEntreDecenas(veces) {
 	return fracciones
 }
 
+//Devuelve la media de un array de números
 function media(nA) {
 	var nAL = nA.length;
 	var suma = 0;
