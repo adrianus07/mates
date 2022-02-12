@@ -57,7 +57,7 @@ function primos(limite) {
 	var esPrimo = true;
 	for (var i=primos[0]; i < limite; i++) {
 		for (n in primos) {
-			if (entre(i, primos[n])) {
+			if (verificaResto(i, primos[n])) {
 				esPrimo = false; 
 			}
 		} 		
