@@ -53,19 +53,19 @@ function expone(a, b) {
 
 //Devuelve todos los números primos existentes hasta el límite(limite)
 function primos(limite) {
-	var primos = [2];
-	var esPrimo = true;
-	for (var i=primos[0]; i < limite; i++) {
-		for (n in primos) {
-			if (verificaResto(i, primos[n])) {
+	var primosAr = [2];
+	for (var i=primosAr[0]; i < limite; i++) {
+		var esPrimo = true;
+		for (n in primosAr) {
+			if (verificaResto(i, primosAr[n]) == 0) {
 				esPrimo = false; 
 			}
 		} 		
 		if (esPrimo) {
-			primos.push(i); 	
+			primosAr.push(i); 	
 		} 	
 	} 	
-	return primos
+	return primosAr
 }
 
 //Devuelve la división de el número de números primos entre sus decenas (veces) veces, un ejemplo sería: ({1, 2, 3, 5, 7} son 5) => (5/10); luego {11, 13, 17, 19} son 4 => ((4+5)/20)
