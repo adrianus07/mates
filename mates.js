@@ -113,14 +113,51 @@ function media(nA) {
 //################################GEOMETRÍA
 
 //CÍRCULO
-function perimetro(radio) {
+function perimetroCirculo(radio) {
 	return (multiplica(radio, pi, 2))
 }
-function area(radio) {
+function areaCirculo(radio) {
 	return (multiplica(expone(radio, 2), pi))
 }
 
 function circulo(radio) {
-	var datos = ["radio = " + radio, "área = " + area(radio) + "²", "perímetro = " + perimetro(radio)];
+	var datos = ["radio = " + radio, "area = " + areaCirculo(radio), "perimetro = " + perimetroCirculo(radio)];
+	return datos
+}
+
+//CUADRADO
+function perimetroCuadrado(lado) {
+	return multiplica(lado, 4)
+}
+
+function areaCuadrado(lado) {
+	return expone(lado, 2)
+}
+
+function cuadrado(lado) {
+	var datos = ["lado = " + lado, "area = " + areaCuadrado(lado), "perimetro = " + perimetroCuadrado(lado)];
+	return datos
+}
+
+//TRIÁNGULO EQUILÁTERO
+function perimetroTrianguloEquilatero(lado) {
+	return multiplica(lado, 3)
+}
+
+function alturaTrianguloEquilatero(lado) {
+	var a, b, c;
+	c = lado;
+	b = divide(lado, 2);
+	a = Math.sqrt(expone(c, 2) - expone(b, 2));
+	return a
+}
+
+function areaTrianguloEquilatero(lado) {
+	area = divide(multiplica(alturaTrianguloEquilatero(lado), lado), 2);
+	return area
+}
+
+function trianguloEquilatero(lado) {
+	var datos = ["lado = " + lado, "area = " + areaTrianguloEquilatero(lado), "perimetro = " + perimetroTrianguloEquilatero(lado)];
 	return datos
 }
