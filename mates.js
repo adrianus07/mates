@@ -121,7 +121,11 @@ function areaCirculo(radio) {
 }
 
 function circulo(radio) {
-	var datos = ["radio = " + radio, "area = " + areaCirculo(radio), "perimetro = " + perimetroCirculo(radio)];
+	var datos = {
+		"radio": radio,
+		"area": areaCirculo(radio),
+		"perimetro": perimetroCirculo(radio)
+	};
 	return datos
 }
 
@@ -135,7 +139,11 @@ function areaCuadrado(lado) {
 }
 
 function cuadrado(lado) {
-	var datos = ["lado = " + lado, "area = " + areaCuadrado(lado), "perimetro = " + perimetroCuadrado(lado)];
+	var datos = {
+		"lado": lado,
+		"area": areaCuadrado(lado),
+		"perimetro": perimetroCuadrado(lado)
+	};
 	return datos
 }
 
@@ -158,6 +166,10 @@ function areaTrianguloEquilatero(lado) {
 }
 
 function trianguloEquilatero(lado) {
-	var datos = ["lado = " + lado, "area = " + areaTrianguloEquilatero(lado), "perimetro = " + perimetroTrianguloEquilatero(lado)];
+	var datos = {
+		"lado": lado,
+		"area": areaTrianguloEquilatero(lado),
+		"perimetro": perimetroTrianguloEquilatero(lado)
+	};
 	return datos
 }
