@@ -181,7 +181,7 @@ function perimetroTrianguloRectangulo(cat1, cat2) {
 }
 
 function hipotenusa(cat1, cat2) {
-	hip = sqrt(suma(expone(cat1, 2), expone(cat2, 2)));
+	hip = Math.sqrt(suma(expone(cat1, 2), expone(cat2, 2)));
 	return hip
 }
 
