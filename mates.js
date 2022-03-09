@@ -173,3 +173,29 @@ function trianguloEquilatero(lado) {
 	};
 	return datos
 }
+
+//TRIÁNGULO RECTÁNGULO
+function perimetroTrianguloRectangulo(cat1, cat2) {
+	hip = hipotenusa(cat1, cat2);
+	return suma(cat1, cat2, hip)
+}
+
+function hipotenusa(cat1, cat2) {
+	hip = sqrt(suma(expone(cat1, 2), expone(cat2, 2)));
+	return hip
+}
+
+function areaTrianguloRectangulo(cat1, cat2) {
+	return divide(multiplica(cat1, cat2), 2)
+}
+
+function trianguloRectangulo(cat1, cat2) {
+	var datos = {
+		"cateto1": cat1,
+		"cateto2": cat2,
+		"hipotenusa": hipotenusa(cat1, cat2),
+		"perimetro": perimetroTrianguloRectangulo(cat1, cat2),
+		"area": areaTrianguloRectangulo(cat1, cat2)
+	};
+	return datos
+}
