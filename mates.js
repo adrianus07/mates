@@ -243,7 +243,7 @@ function trianguloIsoceles(lado, base) {
 		"base": base,
 		"altura": alturaTrianguloIsoceles(lado, base),
 		"perimetro": perimetroTrianguloIsoceles(lado, base),
-		"area": areTrianguloIsoceles(lado, base)
+		"area": areaTrianguloIsoceles(lado, base)
 	}
 	return datos
 }
