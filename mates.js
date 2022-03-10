@@ -199,3 +199,23 @@ function trianguloRectangulo(cat1, cat2) {
 	};
 	return datos
 }
+
+//RECTÁNGULO
+function perimetroRectangulo(l1, l2) {
+	return suma(multiplica(l1, 2), multiplica(l2, 2))
+}
+
+function areaRectangulo(l1, l2) {
+	return multiplica(l1, l2)
+}
+
+function rectangulo(l1, l2) {
+	var datos = {
+		"lado1": l1,
+		"lado2": l2,
+		"perimetro": perimetroRectangulo(l1, l2),
+		"area": areaRectangulo(l1, l2)
+	}
+	return datos
+}
+
