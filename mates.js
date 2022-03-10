@@ -219,3 +219,31 @@ function rectangulo(l1, l2) {
 	return datos
 }
 
+//TRIÁNGULO ISÓCELES
+function perimetroTrianguloIsoceles(lado, base) {
+	return suma(multiplica(lado, 2), base)
+}
+
+function alturaTrianguloIsoceles(lado, base) {
+	var a, b, c;
+	c = lado;
+	b = divide(base, 2);
+	a = Math.sqrt(expone(c, 2) - expone(b, 2));
+	return a
+}
+
+function areaTrianguloIsoceles(lado, base) {
+	var altura = alturaTrianguloIsoceles(lado, base);
+	return divide(multiplica(base, altura), 2)
+}
+
+function trianguloIsoceles(lado, base) {
+	var datos = {
+		"lado": lado, 
+		"base": base,
+		"altura": alturaTrianguloIsoceles(lado, base),
+		"perimetro": perimetroTrianguloIsoceles(lado, base),
+		"area": areTrianguloIsoceles(lado, base)
+	}
+	return datos
+}
