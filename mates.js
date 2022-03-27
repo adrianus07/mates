@@ -247,3 +247,22 @@ function trianguloIsoceles(lado, base) {
 	}
 	return datos
 }
+
+//CUBO
+function volumenCubo(lado) {
+	return expone(lado, 3)
+}
+
+function superficieCubo(lado) {
+	return multiplica(expone(lado, 2), 6)
+}
+
+function cubo(lado) {
+	var datos = {
+		"lado": lado,
+		"volumen": volumenCubo(lado),
+		"superficie": superficieCubo(lado)
+	}
+	return datos
+}
+
