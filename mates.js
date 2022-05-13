@@ -266,3 +266,30 @@ function cubo(lado) {
 	return datos
 }
 
+//ESFERA
+function volumenEsfera(radio) {
+	return multiplica(divide(4, 3), pi, expone(radio, 3))
+}
+
+function diametroEsfera(radio) {
+	return multiplica(radio, 2)
+}
+
+function ecuadorEsfera(radio) {
+	return perimetroCirculo(radio)
+}
+
+function areaEsfera(radio) {
+	return multiplica(4, pi, expone(radio, 2))
+}
+
+function esfera(radio) {
+	var datos = {
+		"radio": radio,
+		"diametro": diametroEsfera(radio),
+		"volumen": volumenEsfera(radio),
+		"area": areaEsfera(radio),
+		"ecuador": ecuadorEsfera(radio)
+	}
+	return datos
+}
